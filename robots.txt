@@ -1,0 +1,6 @@
+# DEMO TEMPORANEA — blocca l'indicizzazione dell'anteprima.
+# PRIMA DI ANDARE ONLINE SUL DOMINIO DEFINITIVO: sostituire con
+#   User-agent: *
+#   Allow: /
+User-agent: *
+Disallow: /

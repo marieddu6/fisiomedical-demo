@@ -708,10 +708,17 @@ section { padding: 100px 0; }
 }
 
 /* ============================================================
-   WELLNESS PREMIUM — RIFINITURA + TRUST (UX geriatrica)
+   WELLNESS PREMIUM — RIFINITURA v3 (sfondo caldo, galleria, trust)
    ============================================================ */
 html{ font-size:118%; }
-body{ font-size:1.06rem; line-height:1.7; }
+body{
+  font-size:1.06rem; line-height:1.7;
+  background:
+    radial-gradient(1100px 560px at 88% -6%, rgba(201,116,75,.07), transparent 60%),
+    radial-gradient(1000px 620px at -8% 104%, rgba(60,87,73,.05), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+}
 .btn{ border-radius:9999px; min-height:56px; padding:15px 30px; font-size:1rem; }
 .btn-full{ min-height:58px; }
 .nav-cta,.badge,.card-tag,.about-card-badge,.staff-role,.flip-hint{ border-radius:9999px; }
@@ -725,11 +732,18 @@ body{ font-size:1.06rem; line-height:1.7; }
 .form-group input,.form-group select,.cdd-trigger{ min-height:54px; font-size:1rem; }
 .form-group textarea{ font-size:1rem; min-height:130px; }
 .cdd-option,.cdd-group-head{ min-height:48px; }
+
+/* Calore */
 .section-alt{ background:var(--sage-tint); }
 #contatti.section-alt{ background:linear-gradient(180deg,var(--peach-tint) 0%, var(--sage-tint) 100%); }
 .services-callout{ background:var(--peach-tint); border-color:rgba(201,116,75,.28); }
-.badge,.about-card-badge{ background:var(--peach-tint); border:1px solid rgba(201,116,75,.30); color:var(--warm-deep); }
+.badge,.about-card-badge{ background:var(--peach-tint); border:1px solid rgba(201,116,75,.32); color:var(--warm-deep); }
 .section-label,.staff-role,.services-cat h4,.flip-hint{ color:var(--warm-deep); }
+
+/* Badge SSN piu visibile */
+.badge{ font-size:.84rem; padding:10px 20px; letter-spacing:.05em; }
+
+/* Trust strip */
 .trust-strip{ padding:30px 0; background:var(--sage-tint); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .trust-strip-inner{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
 .trust-item{ display:flex; align-items:flex-start; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:16px 18px; box-shadow:var(--shadow-sm); }
@@ -738,15 +752,32 @@ body{ font-size:1.06rem; line-height:1.7; }
 .trust-item span{ color:var(--muted); font-size:.92rem; }
 @media (max-width:900px){ .trust-strip-inner{ grid-template-columns:1fr 1fr; } }
 @media (max-width:560px){ .trust-strip-inner{ grid-template-columns:1fr; } }
+
+/* Galleria studio */
+.studio-gallery{ margin-top:44px; }
+.studio-gallery-title{ font-family:var(--font-serif); font-size:1.5rem; color:var(--primary-dark); text-align:center; margin-bottom:24px; }
+.studio-gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.studio-gallery figure{ margin:0; }
+.studio-gallery img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:24px; box-shadow:var(--shadow-md); border:1px solid var(--line); }
+.studio-gallery figcaption{ margin-top:10px; text-align:center; color:var(--muted); font-size:.95rem; font-weight:600; }
+@media (max-width:768px){ .studio-gallery-grid{ grid-template-columns:1fr; } }
+
+/* Staff: 4 schede armoniose */
 .staff-grid{ grid-template-columns:repeat(auto-fit, minmax(232px, 1fr)); }
+
+/* Leggibilita */
 .hero-text > p{ font-size:1.14rem; }
 .section-header p,.about-text > p,.contact-info > p,.services-cta > p{ font-size:1.06rem; }
 .service-card p,.staff-info p,.about-features li,.hero-card-list li,
 .contact-card a,.contact-card span,.contact-card address,
 .location-item p,.location-item address,.services-cat li,.nav-link{ font-size:1rem; line-height:1.6; }
 .form-group label,.checkbox-label{ font-size:.98rem; }
+
+/* Movimento minimo */
 .pill-dot{ animation:none; }
-.hero-petals{ opacity:.45; }
+.hero-petals{ opacity:.4; }
+
+/* Mobile */
 @media (max-width:768px){
   section{ padding:60px 0; }
   .container{ padding:0 20px; }
@@ -1034,6 +1065,16 @@ body{ font-size:1.06rem; line-height:1.7; }
         <a href="#contatti" class="btn btn-primary">Richiedi un appuntamento</a>
       </div>
     </div>
+    <div class="container">
+      <div class="studio-gallery">
+        <h3 class="studio-gallery-title">Uno sguardo al nostro studio</h3>
+        <div class="studio-gallery-grid">
+          <figure><img src="https://www.fisioterapia-cagliari.it/images/pic02.jpg" loading="lazy" alt="Accettazione e sala d'attesa accogliente dello studio Fisiomedical"><figcaption>Accettazione e sala d'attesa</figcaption></figure>
+          <figure><img src="https://www.fisioterapia-cagliari.it/images/pic01.jpg" loading="lazy" alt="Palestra di riabilitazione attrezzata per il recupero motorio"><figcaption>La palestra di riabilitazione</figcaption></figure>
+          <figure><img src="https://www.fisioterapia-cagliari.it/images/pic03.jpg" loading="lazy" alt="Sala dedicata ai trattamenti di terapia fisica"><figcaption>Le sale per i trattamenti</figcaption></figure>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== STAFF ===== -->
@@ -1258,6 +1299,7 @@ body{ font-size:1.06rem; line-height:1.7; }
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             <div><strong>Orari di apertura</strong><p>Lunedì – Venerdì<br>8:00–13:00 · 15:00–19:00</p></div>
           </div>
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Via+San+Gavino+Monreale+18+Monserrato+CA" target="_blank" rel="noopener" style="margin-top:10px;align-self:flex-start">Apri le indicazioni stradali</a>
         </div>
         <div class="location-map reveal reveal-right">
           <iframe
@@ -1281,7 +1323,7 @@ body{ font-size:1.06rem; line-height:1.7; }
           </span>
           <span><strong>Fisiomedical</strong><small>Fisioterapia Cagliari</small></span>
         </a>
-        <p>Studio di fisiokinesiterapia accreditato e convenzionato SSN. Accreditamento regionale n°1173 del 21/10/2013.</p>
+        <p>Studio di fisiokinesiterapia accreditato e convenzionato SSN. Accreditamento regionale n°1173 del 21/10/2013.<br><br><strong style="color:#fff">Direzione Sanitaria:</strong> Dr. Piergiorgio Massidda<br><strong style="color:#fff">Visite fisiatriche:</strong> Dott. Giovanni Congera</p>
       </div>
       <div class="footer-links">
         <h4>Navigazione</h4>

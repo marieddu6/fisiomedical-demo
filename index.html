@@ -25,7 +25,7 @@
   --primary:#3C5749; --primary-light:#4E6F5C; --primary-dark:#2B4035; --primary-rgb:60,87,73;
   --accent-light:#C9744B; --accent-text:#8F4A24; --accent-rgb:201,116,75;
   --bg-alt:#EBF1EC; --text:#2C3A33; --text-muted:#5E6C62; --border:#E8E1D5;
-  --success:#3C5749; --error:#B0463B;
+  --success:#3C5749; --error:#B0463B; --wa:#117A43;
   --shadow-sm:0 6px 20px rgba(44,58,51,.05);
   --shadow-md:0 12px 30px rgba(44,58,51,.07);
   --shadow-lg:0 18px 42px rgba(44,58,51,.08);
@@ -708,7 +708,7 @@ section { padding: 100px 0; }
 }
 
 /* ============================================================
-   WELLNESS PREMIUM — RIFINITURA v4 (calore+, trust Google, galleria 4)
+   WELLNESS PREMIUM — v5 (WhatsApp, FAQ, calore)
    ============================================================ */
 html{ font-size:118%; }
 body{
@@ -721,17 +721,13 @@ body{
 }
 .btn{ border-radius:9999px; min-height:56px; padding:15px 30px; font-size:1rem; }
 .btn-full{ min-height:58px; }
-/* CTA secondarie e nav in terracotta: piu calore */
 .btn-ghost{ color:var(--warm-deep); border-color:var(--warm); }
 .btn-ghost:hover{ background:var(--peach-tint); color:var(--warm-deep); border-color:var(--warm); }
 .nav-cta{ background:var(--warm-deep); border-radius:9999px; min-height:48px; }
 .nav-cta:hover{ background:#8F4A24; }
-.mobile-cta-book{ background:var(--warm-deep); }
-.mobile-cta-book:hover{ background:#8F4A24; }
-.mobile-cta-call{ color:var(--accent); }
 .badge,.card-tag,.about-card-badge,.staff-role,.flip-hint{ border-radius:9999px; }
 .nav-link{ min-height:46px; display:inline-flex; align-items:center; }
-.services-toggle,.mobile-cta-call,.mobile-cta-book{ border-radius:9999px; min-height:54px; font-size:1rem; }
+.services-toggle{ border-radius:9999px; min-height:54px; font-size:1rem; }
 .service-card::before{ background:linear-gradient(90deg, var(--warm), var(--accent)); }
 .service-card,.staff-card,.flip-face,.about-card,.hero-card,.contact-form-wrap,
 .contact-card,.location-item,.location-map,.services-full,.form-success,.staff-avatar-bg{ border-radius:24px; }
@@ -748,7 +744,6 @@ body{
 .section-label,.staff-role,.services-cat h4,.flip-hint{ color:var(--warm-deep); }
 .badge{ font-size:.84rem; padding:10px 20px; letter-spacing:.05em; }
 
-/* Rating Google nell'hero */
 .hero-rating{ display:inline-flex; align-items:center; gap:10px; margin-bottom:28px; padding:8px 16px;
   background:var(--surface); border:1px solid var(--line); border-radius:9999px; box-shadow:var(--shadow-sm);
   color:var(--ink); font-size:.98rem; text-decoration:none; transition:var(--transition); }
@@ -756,7 +751,6 @@ body{
 .hero-rating .stars{ color:var(--warm); letter-spacing:1px; font-size:1.05rem; }
 .hero-rating-text strong{ color:var(--accent-dark); }
 
-/* Trust strip */
 .trust-strip{ padding:30px 0; background:var(--sage-tint); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .trust-strip-inner{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
 .trust-item{ display:flex; align-items:flex-start; gap:12px; background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--warm); border-radius:18px; padding:16px 18px; box-shadow:var(--shadow-sm); }
@@ -766,7 +760,6 @@ body{
 @media (max-width:900px){ .trust-strip-inner{ grid-template-columns:1fr 1fr; } }
 @media (max-width:560px){ .trust-strip-inner{ grid-template-columns:1fr; } }
 
-/* Galleria studio (4 slot) */
 .studio-gallery{ margin-top:46px; }
 .studio-gallery-title{ font-family:var(--font-serif); font-size:1.5rem; color:var(--primary-dark); text-align:center; margin-bottom:26px; }
 .studio-gallery-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:20px; }
@@ -779,6 +772,28 @@ body{
 @media (max-width:768px){ .studio-gallery-grid{ grid-template-columns:1fr; } }
 
 .staff-grid{ grid-template-columns:repeat(auto-fit, minmax(232px, 1fr)); }
+
+/* WhatsApp */
+.contact-card-wa .contact-card-icon{ background:rgba(17,122,67,.12); color:var(--wa); }
+.contact-card-wa a:hover{ color:var(--wa); }
+.mobile-cta-wa{ flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:13px 8px; border-radius:9999px; background:var(--wa); color:#fff; font-size:.95rem; font-weight:700;
+  box-shadow:0 4px 12px rgba(17,122,67,.28); }
+.mobile-cta-wa:hover{ background:#0E6638; }
+.mobile-cta{ gap:8px; }
+.mobile-cta-call,.mobile-cta-book{ border-radius:9999px; min-height:54px; font-size:.95rem; padding:13px 8px; }
+
+/* FAQ */
+.faq-list{ max-width:840px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.faq-item{ background:var(--surface); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-sm); overflow:hidden; }
+.faq-item summary{ list-style:none; cursor:pointer; padding:20px 24px; font-size:1.1rem; font-weight:700; color:var(--accent-dark); display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:60px; }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary::after{ content:"+"; color:var(--warm-deep); font-size:1.7rem; font-weight:700; line-height:1; flex:0 0 auto; }
+.faq-item[open] summary::after{ content:"\2212"; }
+.faq-item[open] summary{ color:var(--accent); }
+.faq-a{ padding:0 24px 22px; color:var(--text); font-size:1.04rem; line-height:1.7; }
+.faq-a a{ color:var(--warm-deep); text-decoration:underline; font-weight:600; }
+.faq-item summary:focus-visible{ outline:3px solid var(--focus); outline-offset:-3px; }
 
 .hero-text > p{ font-size:1.14rem; }
 .section-header p,.about-text > p,.contact-info > p,.services-cta > p{ font-size:1.06rem; }
@@ -796,9 +811,10 @@ body{
   body{ font-size:1.08rem; }
   .hero-text h1{ line-height:1.16; }
   .hero-actions .btn{ width:100%; }
-  .btn,.mobile-cta-call,.mobile-cta-book{ min-height:56px; }
+  .btn{ min-height:56px; }
   .service-card{ padding:24px 22px; }
   .hero-rating{ margin-left:auto; margin-right:auto; }
+  .faq-item summary{ font-size:1.05rem; }
 }
 :focus-visible{ outline:3px solid var(--focus); outline-offset:3px; }
 
@@ -1217,6 +1233,10 @@ body{
             <div class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
             <div><strong>Telefono</strong><a href="tel:+390705811870">070.581187</a><a href="tel:+390705725000">070.572500</a></div>
           </div>
+          <div class="contact-card contact-card-wa">
+            <div class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.06 1.6 5.82L2 22l4.41-1.15a9.9 9.9 0 004.63 1.18h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.04-.96.22-3.23-.67-2.73-1.08-4.46-3.86-4.6-4.04-.13-.18-1.1-1.46-1.1-2.79 0-1.32.7-1.97.95-2.24.24-.27.53-.34.7-.34.18 0 .35.01.5.01.16.01.38-.06.59.45.24.58.81 2 .88 2.15.07.15.12.32.02.5-.09.18-.14.29-.27.45-.13.15-.28.34-.4.46-.13.13-.27.28-.12.54.15.27.67 1.1 1.43 1.78.99.88 1.81 1.15 2.07 1.28.26.13.41.11.56-.07.15-.18.64-.75.81-1 .17-.27.35-.22.59-.13.24.09 1.53.72 1.79.85.26.13.43.2.5.31.06.11.06.64-.18 1.32z"/></svg></div>
+            <div><strong>WhatsApp</strong><a href="https://wa.me/39070581187?text=Salve%2C%20vorrei%20informazioni%20per%20una%20prenotazione%20presso%20Fisiomedical" target="_blank" rel="noopener">Scrivici su WhatsApp</a></div>
+          </div>
           <div class="contact-card">
             <div class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
             <div><strong>Email</strong><a href="mailto:fisiomedicalmassidda@tiscali.it">fisiomedicalmassidda@tiscali.it</a></div>
@@ -1336,6 +1356,25 @@ body{
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section-alt" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Domande frequenti</span>
+        <h2 id="faq-title">Le risposte alle tue domande</h2>
+        <p>Tutto quello che ti serve sapere prima di venire da noi, con calma e senza pensieri.</p>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item"><summary>Come prenoto una visita o un trattamento?</summary><div class="faq-a">È semplice: chiama la segreteria allo <a href="tel:+390705811870">070 581187</a> oppure scrivici su <a href="https://wa.me/39070581187" target="_blank" rel="noopener">WhatsApp</a>. Ti aiutiamo noi a scegliere il giorno e l'orario più comodi — senza fretta.</div></details>
+        <details class="faq-item"><summary>Cosa devo portare al primo appuntamento?</summary><div class="faq-a">Porta un <strong>documento d'identità</strong>, la <strong>tessera sanitaria</strong> e, per le prestazioni in convenzione, l'<strong>impegnativa del medico curante</strong>. Se hai referti o esami precedenti, portali pure: ci aiutano a conoscerti meglio.</div></details>
+        <details class="faq-item"><summary>Le prestazioni sono convenzionate con il SSN?</summary><div class="faq-a">Sì. Siamo <strong>convenzionati con il Servizio Sanitario Nazionale</strong> (accreditamento n°1173). Le stesse prestazioni sono disponibili anche in libera professione, se preferisci.</div></details>
+        <details class="faq-item"><summary>Serve sempre l'impegnativa del medico?</summary><div class="faq-a">Per le prestazioni <strong>in convenzione SSN</strong> sì, serve l'impegnativa del medico curante. Per le visite e i trattamenti privati no. In caso di dubbio, chiedi pure in segreteria: ti guidiamo passo dopo passo.</div></details>
+        <details class="faq-item"><summary>Fate trattamenti a domicilio?</summary><div class="faq-a">Sì, offriamo riabilitazione <strong>a domicilio</strong> nei casi previsti dalle direttive della Regione Sardegna. Chiamaci e verifichiamo insieme se è possibile nella tua situazione.</div></details>
+        <details class="faq-item"><summary>Lo studio è accessibile? C'è parcheggio?</summary><div class="faq-a">La struttura è <strong>priva di barriere architettoniche</strong>, con parcheggio dedicato. Siamo a Monserrato, a pochi passi dalla fermata della metro <strong>“Redentore”</strong> e comodi anche in auto dalla SS 554.</div></details>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer id="footer">
     <div class="container footer-inner">
@@ -1391,7 +1430,11 @@ body{
   <div class="mobile-cta" aria-label="Azioni rapide">
     <a href="tel:+390705811870" class="mobile-cta-call">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      Chiama ora
+      Chiama
+    </a>
+    <a href="https://wa.me/39070581187?text=Salve%2C%20vorrei%20informazioni%20per%20una%20prenotazione%20presso%20Fisiomedical" target="_blank" rel="noopener" class="mobile-cta-wa" aria-label="Scrivici su WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.06 1.6 5.82L2 22l4.41-1.15a9.9 9.9 0 004.63 1.18h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.04-.96.22-3.23-.67-2.73-1.08-4.46-3.86-4.6-4.04-.13-.18-1.1-1.46-1.1-2.79 0-1.32.7-1.97.95-2.24.24-.27.53-.34.7-.34.18 0 .35.01.5.01.16.01.38-.06.59.45.24.58.81 2 .88 2.15.07.15.12.32.02.5-.09.18-.14.29-.27.45-.13.15-.28.34-.4.46-.13.13-.27.28-.12.54.15.27.67 1.1 1.43 1.78.99.88 1.81 1.15 2.07 1.28.26.13.41.11.56-.07.15-.18.64-.75.81-1 .17-.27.35-.22.59-.13.24.09 1.53.72 1.79.85.26.13.43.2.5.31.06.11.06.64-.18 1.32z"/></svg>
+      WhatsApp
     </a>
     <a href="#contatti" class="mobile-cta-book">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>

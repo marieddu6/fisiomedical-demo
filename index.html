@@ -823,6 +823,8 @@ body{
   .hero-rating{ margin-left:auto; margin-right:auto; }
   .faq-item summary{ font-size:1.05rem; }
 }
+/* Contenuti sempre visibili: niente fade-in dipendente da JS (piu robusto + meno animazioni) */
+.reveal{ opacity:1 !important; transform:none !important; }
 :focus-visible{ outline:3px solid var(--focus); outline-offset:3px; }
 
   </style>

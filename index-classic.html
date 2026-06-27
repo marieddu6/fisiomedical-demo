@@ -117,6 +117,13 @@ section{padding:52px 0}
 .staff .who{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--primary);border-radius:12px;padding:16px 18px}
 .staff .who strong{display:block;color:var(--primary-dark)}
 .staff .who span{color:var(--muted);font-size:.95rem}
+.env-block{max-width:1040px;margin:28px auto 0}
+.env-feature img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:12px;border:1px solid var(--line);margin-bottom:16px}
+.env-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.env-grid figure{margin:0}
+.env-grid img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.env-grid figcaption{margin-top:6px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(max-width:620px){.env-grid{grid-template-columns:1fr}}
 
 /* Come trovarci */
 .loc-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start;max-width:1100px;margin:0 auto}
@@ -225,29 +232,27 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
   <!-- Tre colonne con foto: la firma del sito storico -->
   <section aria-label="Sezioni principali">
     <div class="wrap">
+      <div class="sec-title"><h2>Le nostre terapie</h2><p>Tre dei trattamenti che eseguiamo, con attrezzature professionali e personale qualificato.</p></div>
       <div class="cards3">
         <article class="pcard">
-          <img src="images/prestazioni.jpg" loading="lazy" alt="Sala trattamenti e palestra di riabilitazione dello studio Fisiomedical">
+          <img src="images/prestazioni%20back%20school.jpg" loading="lazy" alt="Attrezzature per la Back School, scuola della schiena, dello studio Fisiomedical">
           <div class="body">
-            <h3>Le nostre prestazioni</h3>
-            <p>Visite fisiatriche e un'ampia gamma di trattamenti riabilitativi, eseguiti da professionisti qualificati con attrezzature di ultima generazione.</p>
-            <a class="more" href="#prestazioni">Leggi ancora →</a>
+            <h3>Back School</h3>
+            <p>Programma di educazione posturale e ginnastica specifica per la schiena (Scuola della Schiena), per prevenire e gestire il mal di schiena. Centro affiliato Back School.</p>
           </div>
         </article>
         <article class="pcard">
-          <img src="images/reception2.jpg" loading="lazy" alt="Reception e front office dello studio Fisiomedical">
+          <img src="images/prestazioni%20tecar.jpg" loading="lazy" alt="Apparecchiatura per Tecarterapia dello studio Fisiomedical">
           <div class="body">
-            <h3>Accettazione e prenotazioni</h3>
-            <p>Convenzionati con il SSN, offriamo un servizio ambulatoriale e, nei casi previsti, domiciliare. La prenotazione si effettua telefonando alla segreteria.</p>
-            <a class="more" href="#accettazione">Leggi ancora →</a>
+            <h3>Tecarterapia</h3>
+            <p>Terapia a radiofrequenza che stimola i processi riparativi dei tessuti: indicata per patologie muscolari, tendinee e articolari e per la riduzione del dolore.</p>
           </div>
         </article>
         <article class="pcard">
-          <img src="images/studio1.jpg" loading="lazy" alt="Ambiente interno dello studio Fisiomedical">
+          <img src="images/prestazionienf%20phy.jpg" loading="lazy" alt="Dispositivo per terapia strumentale ENF dello studio Fisiomedical">
           <div class="body">
-            <h3>Il nostro studio</h3>
-            <p>Una struttura ampia e priva di barriere architettoniche, a pochi passi dalla fermata della metropolitana “Redentore”, facile da raggiungere da Cagliari e dintorni.</p>
-            <a class="more" href="#studio">Leggi ancora →</a>
+            <h3>ENF Physio</h3>
+            <p>Terapia strumentale ENF per la neuromodulazione del dolore e il supporto al recupero funzionale, nelle problematiche muscoloscheletriche.</p>
           </div>
         </article>
       </div>
@@ -346,7 +351,7 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
   <section id="studio" class="alt" aria-labelledby="st-h">
     <div class="wrap">
       <div class="sec-title">
-        <h2 id="st-h">Lo studio</h2>
+        <h2 id="st-h">Lo studio e l’accoglienza</h2>
         <p>Oltre 20 anni al servizio della salute dei pazienti di Cagliari e provincia.</p>
       </div>
       <div class="studio-grid">
@@ -358,6 +363,15 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
           <div class="who"><strong>Dr. Piergiorgio Massidda</strong><span>Direttore Sanitario — Medicina Fisica e Riabilitazione</span></div>
           <div class="who"><strong>Dott. Giovanni Congera</strong><span>Specialista · Visite fisiatriche</span></div>
           <div class="who"><strong>Équipe di fisioterapisti</strong><span>professionisti qualificati e costantemente aggiornati</span></div>
+        </div>
+      </div>
+      <div class="env-block">
+        <figure class="env-feature"><img src="images/staff.jpg" loading="lazy" alt="L'équipe di Fisiomedical: medici e fisioterapisti dello studio"></figure>
+        <div class="env-grid">
+          <figure><img src="images/reception.jpg" loading="lazy" alt="Reception e accoglienza dello studio Fisiomedical"><figcaption>Accoglienza e reception</figcaption></figure>
+          <figure><img src="images/reception2.jpg" loading="lazy" alt="Front office e sala d'attesa dello studio Fisiomedical"><figcaption>Sala d'attesa</figcaption></figure>
+          <figure><img src="images/studio.jpg" loading="lazy" alt="Ambiente interno dello studio Fisiomedical"><figcaption>I nostri ambienti</figcaption></figure>
+          <figure><img src="images/studio1.jpg" loading="lazy" alt="Sala per la riabilitazione dello studio Fisiomedical"><figcaption>Spazi per la riabilitazione</figcaption></figure>
         </div>
       </div>
     </div>
@@ -437,12 +451,4 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
   var btn=document.getElementById('load-map'),box=document.getElementById('map-facade');
   if(!btn||!box)return;
   btn.addEventListener('click',function(){
-    var f=document.createElement('iframe');
-    f.title='Mappa: Via San Gavino Monreale 18, Monserrato (CA)';
-    f.src=box.dataset.src; f.loading='lazy'; f.referrerPolicy='no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
-    box.replaceWith(f);
-  });
-})();
-</script>
-</body>
-</html>
+    va

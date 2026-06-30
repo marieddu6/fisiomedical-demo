@@ -89,7 +89,6 @@ h1,h2,h3{line-height:1.2;color:var(--primary-dark)}
 .masthead img.logo{height:84px;width:auto;margin:0 auto 12px}
 .masthead .tagline{font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .masthead .accred{font-size:.85rem;color:var(--text);margin-top:6px}
-.masthead .motto{font-style:italic;color:var(--primary);font-weight:600;font-size:1.05rem;margin:2px 0 10px}
 .masthead .rule{height:4px;background:linear-gradient(90deg,var(--primary),#6E8B77 60%,var(--primary));margin-top:18px}
 nav.classic{background:var(--surface);border-bottom:1px solid var(--line)}
 nav.classic ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:4px;padding:8px 0}
@@ -127,12 +126,6 @@ section{padding:50px 0}
 .claim{background:var(--primary);color:#fff;text-align:center;padding:32px 0}
 .claim p{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem}
 
-/* Trust medica */
-.med-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.med-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;text-align:left}
-.med-card .num{font-size:1.5rem;color:var(--primary);display:block;line-height:1;margin-bottom:6px}
-.med-card strong{display:block;color:var(--primary-dark);font-size:1.05rem;margin-bottom:4px}
-.med-card span{color:var(--muted);font-size:.95rem}
 
 /* Servizi */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
@@ -210,13 +203,14 @@ footer.site a{color:#fff}
 footer.site .fb-name{font-weight:700;font-size:1.1rem;display:block;margin-bottom:8px}
 footer.site p{color:rgba(255,255,255,.82);font-size:.95rem;line-height:1.7}
 footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
+footer.site .foot-legal{margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.6)}
+footer.site .foot-legal a{color:#fff;text-decoration:underline}
 
 /* Mobile sticky bottom */
 .callbar-m{display:none}
 @media (max-width:880px){
   .trust-strip .wrap{grid-template-columns:1fr 1fr}
   .cards3{grid-template-columns:1fr}
-  .med-grid{grid-template-columns:1fr 1fr}
   .svc-grid{grid-template-columns:1fr 1fr}
   .two-col,.studio-grid,.loc-grid,.contact-grid{grid-template-columns:1fr}
 }
@@ -225,7 +219,6 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
   .masthead img.logo{height:66px}
   .trust-strip .wrap{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr}
-  .med-grid{grid-template-columns:1fr}
   .claim p{font-size:1.25rem}
   body{padding-bottom:78px}
   .callbar-m{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:150;gap:8px;background:var(--surface);border-top:1px solid var(--line);padding:9px 12px calc(9px + env(safe-area-inset-bottom))}
@@ -258,7 +251,7 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
 <div class="utility">
   <div class="wrap">
     <span class="cred"><svg aria-hidden="true"><use href="#i-shield"/></svg>Convenzionato SSN · Accreditamento n°1173</span>
-    <a class="tel" href="tel:+39070581187" aria-label="Chiama lo studio al numero 070 581187"><svg aria-hidden="true" style="width:18px;height:18px"><use href="#i-phone"/></svg>070 581187</a>
+    <a class="tel" href="tel:070581187" aria-label="Chiama lo studio al numero 070 581187"><svg aria-hidden="true" style="width:18px;height:18px"><use href="#i-phone"/></svg>070 581187</a>
   </div>
 </div>
 
@@ -267,7 +260,6 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
   <div class="wrap">
     <img class="logo" src="images/logo.jpg" alt="Fisiomedical — Studio di Fisiokinesiterapia, Monserrato (Cagliari)">
     <h1 class="sr-only">Fisiomedical — Studio di fisiokinesiterapia a Monserrato (Cagliari), convenzionato SSN</h1>
-    <p class="motto">Fisiomedical: efficienza, calore umano e professionalità</p>
     <p class="tagline">Studio di Fisiokinesiterapia accreditato e convenzionato · Monserrato — Cagliari</p>
     <p class="accred">Accreditamento istituzionale definitivo n°1173 del 21-10-2013</p>
   </div>
@@ -304,21 +296,21 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
       <div class="sec-title"><h2 id="ter-h">Le nostre terapie</h2><p>Tre dei trattamenti che eseguiamo, con attrezzature professionali e personale qualificato.</p></div>
       <div class="cards3">
         <article class="pcard">
-          <img src="images/prestazioni%20back%20school.jpg" loading="lazy" alt="Attrezzature per la Back School, scuola della schiena, dello studio Fisiomedical">
+          <img src="images/back-school-fisiomedical.jpg" loading="lazy" alt="Attrezzature per la Back School, scuola della schiena, dello studio Fisiomedical">
           <div class="body">
             <h3>Back School</h3>
             <p>Programma di educazione posturale e ginnastica specifica per la schiena (Scuola della Schiena), per prevenire e gestire il mal di schiena. Centro affiliato Back School.</p>
           </div>
         </article>
         <article class="pcard">
-          <img src="images/prestazioni%20tecar.jpg" loading="lazy" alt="Apparecchiatura per Tecarterapia dello studio Fisiomedical">
+          <img src="images/tecar-fisiomedical.jpg" loading="lazy" alt="Apparecchiatura per Tecarterapia dello studio Fisiomedical">
           <div class="body">
             <h3>Tecarterapia</h3>
             <p>Terapia a radiofrequenza che stimola i processi riparativi dei tessuti: indicata per patologie muscolari, tendinee e articolari e per la riduzione del dolore.</p>
           </div>
         </article>
         <article class="pcard">
-          <img src="images/prestazionienf%20phy.jpg" loading="lazy" alt="Dispositivo per terapia strumentale ENF dello studio Fisiomedical">
+          <img src="images/enf-physio-fisiomedical.jpg" loading="lazy" alt="Dispositivo per terapia strumentale ENF dello studio Fisiomedical">
           <div class="body">
             <h3>ENF Physio</h3>
             <p>Terapia strumentale ENF per la neuromodulazione del dolore e il supporto al recupero funzionale, nelle problematiche muscoloscheletriche.</p>
@@ -326,26 +318,13 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
         </article>
       </div>
       <div class="cta-center">
-        <a class="btn btn-call btn-lg" href="tel:+39070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora: 070 581187</a>
+        <a class="btn btn-call btn-lg" href="tel:070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora: 070 581187</a>
       </div>
     </div>
   </section>
 
   <!-- claim storico -->
-  <div class="claim"><div class="wrap"><p>Fisiomedical: efficienza, calore umano e professionalità</p></div></div>
-
-  <!-- 5) Trust medica -->
-  <section class="alt" aria-labelledby="tm-h">
-    <div class="wrap">
-      <div class="sec-title"><h2 id="tm-h">Una struttura sanitaria su cui contare</h2><p>Esperienza, qualifica e garanzie istituzionali.</p></div>
-      <div class="med-grid">
-        <div class="med-card"><span class="num">20+</span><strong>Anni di attività</strong><span>al servizio dei pazienti di Cagliari e provincia.</span></div>
-        <div class="med-card"><span class="num">SSN</span><strong>Convenzionato</strong><span>con impegnativa; disponibile anche in libera professione.</span></div>
-        <div class="med-card"><span class="num">n°1173</span><strong>Accreditamento</strong><span>regionale definitivo del 21/10/2013.</span></div>
-        <div class="med-card"><strong>Dr. Piergiorgio Massidda</strong><span>Direttore Sanitario</span><strong style="margin-top:8px">Dott. Giovanni Congera</strong><span>Specialista · Visite fisiatriche</span></div>
-      </div>
-    </div>
-  </section>
+  <div class="claim"><div class="wrap"><p>Efficienza, calore umano e professionalità.</p></div></div>
 
   <!-- 6) Servizi: 6 card + elenco completo -->
   <section id="prestazioni" aria-labelledby="pr-h">
@@ -381,7 +360,7 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
           <h3>Come prenotare</h3>
           <p>Chiama la segreteria allo <strong>070 581187</strong> (oppure 070 572500), indica la prestazione di cui hai bisogno e fissiamo insieme il giorno e l'orario più comodi.</p>
           <div class="hours"><strong>Orari segreteria:</strong> Lunedì–Venerdì · 8:00–13:00 e 15:00–19:00</div>
-          <p style="margin-top:18px"><a class="btn btn-call btn-lg" href="tel:+39070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama per prenotare</a></p>
+          <p style="margin-top:18px"><a class="btn btn-call btn-lg" href="tel:070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama per prenotare</a></p>
         </div>
         <div class="panel">
           <h3>Cosa portare</h3>
@@ -456,10 +435,10 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
       <div class="contact-grid">
         <div class="panel">
           <h3>Recapiti diretti</h3>
-          <div class="contact-line"><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+39070581187">070 581187</a> · <a href="tel:+39070572500">070 572500</a></div>
+          <div class="contact-line"><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:070581187">070 581187</a> · <a href="tel:070572500">070 572500</a></div>
           <div class="contact-line"><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:fisiomedicalmassidda@tiscali.it">fisiomedicalmassidda@tiscali.it</a></div>
           <div class="contact-line"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Via San Gavino Monreale, 18 — Monserrato (CA)</span></div>
-          <p style="margin-top:14px"><a class="btn btn-call" href="tel:+39070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora: 070 581187</a></p>
+          <p style="margin-top:14px"><a class="btn btn-call" href="tel:070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora: 070 581187</a></p>
         </div>
         <div class="panel">
           <h3>Orari</h3>
@@ -474,11 +453,11 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
       <div class="sec-title"><h2 id="faq-h">Domande frequenti</h2></div>
       <div class="faq">
         <details><summary>Le prestazioni sono convenzionate con il SSN?</summary><div class="a">Sì. Siamo convenzionati con il Servizio Sanitario Nazionale (accreditamento n°1173). Le stesse prestazioni sono disponibili anche in libera professione.</div></details>
-        <details><summary>Serve l'impegnativa del medico?</summary><div class="a">Per le prestazioni in convenzione SSN sì, serve l'impegnativa del medico curante. Per le prestazioni private non è necessaria. In caso di dubbio, chiedi in segreteria allo <a href="tel:+39070581187">070 581187</a>.</div></details>
+        <details><summary>Serve l'impegnativa del medico?</summary><div class="a">Per le prestazioni in convenzione SSN sì, serve l'impegnativa del medico curante. Per le prestazioni private non è necessaria. In caso di dubbio, chiedi in segreteria allo <a href="tel:070581187">070 581187</a>.</div></details>
         <details><summary>Cosa devo portare al primo appuntamento?</summary><div class="a">Documento di identità, Tessera Sanitaria e, per le prestazioni in convenzione, l'impegnativa del medico curante e il foglio dello specialista prescrittore.</div></details>
         <details><summary>Effettuate trattamenti a domicilio?</summary><div class="a">Sì, eroghiamo riabilitazione a domicilio nei casi previsti dalle direttive della Regione Sardegna. Chiamaci per verificare la tua situazione.</div></details>
         <details><summary>Lo studio è accessibile? C'è parcheggio?</summary><div class="a">La struttura è priva di barriere architettoniche, con parcheggio dedicato. Siamo a pochi passi dalla fermata della metro “Redentore”.</div></details>
-        <details><summary>Come prenoto una visita?</summary><div class="a">La prenotazione si effettua telefonando alla segreteria allo <a href="tel:+39070581187">070 581187</a> (oppure 070 572500), negli orari di apertura.</div></details>
+        <details><summary>Come prenoto una visita?</summary><div class="a">La prenotazione si effettua telefonando alla segreteria allo <a href="tel:070581187">070 581187</a> (oppure 070 572500), negli orari di apertura.</div></details>
       </div>
     </div>
   </section>
@@ -491,15 +470,16 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
     <span class="fb-name">Fisiomedical S.r.l.</span>
     <p>Studio di fisiokinesiterapia accreditato e convenzionato SSN · Accreditamento regionale n°1173 del 21/10/2013<br>
     Direzione Sanitaria: Dr. Piergiorgio Massidda · Visite fisiatriche: Dott. Giovanni Congera</p>
-    <p style="margin-top:10px">Via San Gavino Monreale, 18 — 09042 Monserrato (CA) · <a href="tel:+39070581187">070 581187</a> · <a href="tel:+39070572500">070 572500</a><br>
+    <p style="margin-top:10px">Via San Gavino Monreale, 18 — 09042 Monserrato (CA) · <a href="tel:070581187">070 581187</a> · <a href="tel:070572500">070 572500</a><br>
     <a href="mailto:fisiomedicalmassidda@tiscali.it">fisiomedicalmassidda@tiscali.it</a></p>
+    <p class="foot-legal">P. IVA 01512100924 · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a></p>
     <div class="legal">© 2025 Fisiomedical S.r.l. — Tutti i diritti riservati.</div>
   </div>
 </footer>
 
 <!-- 11) Mobile sticky bottom -->
 <div class="callbar-m" aria-label="Azioni rapide">
-  <a class="c" href="tel:+39070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+  <a class="c" href="tel:070581187"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
   <a class="b" href="#accettazione">Prenota</a>
 </div>
 
@@ -512,4 +492,9 @@ footer.site .legal{margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.55)}
     var f=document.createElement('iframe');
     f.title='Mappa: Via San Gavino Monreale 18, Monserrato (CA)';
     f.src=box.dataset.src; f.loading='lazy'; f.referrerPolicy='no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
-    box.replaceWith(
+    box.replaceWith(f);
+  });
+})();
+</script>
+</body>
+</html>

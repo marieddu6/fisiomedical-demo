@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Come trovarci — Fisiomedical · Monserrato - Cagliari</title>
+<meta name="description" content="Dove si trova lo studio Fisiomedical: Via San Gavino Monreale 18, Monserrato (Cagliari). Indicazioni e recapiti.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#33414c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%232f6196'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+<div class="page">
+
+<div class="topstrip"><div class="in"><span class="place">Monserrato - Cagliari</span><span>Segreteria: <a href="tel:070581187">070.581187</a> · <a href="tel:070572500">070.572500</a></span></div></div>
+
+<header class="head">
+  <img class="logo" src="../images/logo.jpg" alt="Fisiomedical — Studio di Fisiokinesiterapia, Monserrato (Cagliari)">
+  <p class="claim">Studio di fisiokinesiterapia accreditato e convenzionato · Monserrato - Cagliari</p>
+  <p class="accr">Accreditamento istituzionale definitivo n°1173 del 21-10-2013</p>
+</header>
+
+<div class="banner">Visite fisiatriche - Fisiokinesiterapia - Convenzionato SSN</div>
+
+<nav class="menu" aria-label="Navigazione principale">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="prestazioni.html">Prestazioni erogate</a></li>
+    <li><a href="accettazione-prenotazioni.html">Accettazione - Prenotazioni</a></li>
+    <li><a href="studio.html">Lo studio</a></li>
+    <li><a href="come-trovarci.html" class="active">Come trovarci</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
+
+<main id="main" class="content">
+  <h1 class="pt">Come trovarci</h1>
+  <p class="pt-sub">Siamo a Monserrato, in provincia di Cagliari, facilmente raggiungibili in auto, in metro e con i mezzi pubblici.</p>
+  <div class="loc">
+    <dl class="info">
+      <dt>Indirizzo</dt>
+      <dd>Via San Gavino Monreale, 18<br>09042 Monserrato (CA)</dd>
+      <dt>Metro e bus</dt>
+      <dd>Fermata "Redentore" della metropolitana di superficie, a pochi passi.</dd>
+      <dt>In auto</dt>
+      <dd>Accesso comodo dalla SS 554, con parcheggio dedicato.</dd>
+      <dt>Recapiti</dt>
+      <dd>Tel. <a href="tel:070581187">070.581187</a> · <a href="tel:070572500">070.572500</a></dd>
+      <dd style="margin-top:14px"><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Via+San+Gavino+Monreale+18+Monserrato+CA" target="_blank" rel="noopener">Apri le indicazioni stradali</a></dd>
+    </dl>
+    <div class="mapbox">
+      <div class="mapfacade" id="map-facade" data-src="https://www.google.com/maps?q=Via%20San%20Gavino%20Monreale%2018%2C%2009042%20Monserrato%20CA&hl=it&z=16&output=embed">
+        <div class="in2">
+          <strong>Via San Gavino Monreale, 18 — Monserrato (CA)</strong>
+          <button type="button" class="btn btn-call" id="load-map">Mostra la mappa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div>
+      <h4>Contatti</h4>
+      <p>Fisiomedical S.r.l.<br>Via San Gavino Monreale, 18 — 09042 Monserrato (CA)</p>
+      <p>Tel. <a href="tel:070581187">070.581187</a> · <a href="tel:070572500">070.572500</a><br><a href="mailto:fisiomedicalmassidda@tiscali.it">fisiomedicalmassidda@tiscali.it</a></p>
+    </div>
+    <div>
+      <h4>Lo studio</h4>
+      <p>Studio di fisiokinesiterapia, fisioterapia e riabilitazione · accreditato e convenzionato SSN · Accreditamento n°1173 del 21/10/2013.<br>Direzione Sanitaria: Dr. Piergiorgio Massidda · Visite fisiatriche: Dott. Giovanni Congera.</p>
+    </div>
+    <div class="legal">
+      Anteprima storica modernizzata (legacy-modern-preview) — solo valutazione interna · © 2026 Fisiomedical S.r.l.<br>
+      <a href="../privacy.html">Privacy Policy</a> · <a href="../cookie.html">Cookie Policy</a> — bozze da validare. Dati e orari da confermare con il titolare prima della pubblicazione.
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('load-map'),box=document.getElementById('map-facade');
+  if(!btn||!box)return;
+  btn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.title='Mappa: Via San Gavino Monreale 18, Monserrato (CA)';
+    f.src=box.dataset.src; f.loading='lazy'; f.referrerPolicy='no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
+    box.replaceWith(f);
+  });
+})();
+</script>
+</body>
+</html>
